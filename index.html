@@ -1,63 +1,19 @@
-<!--
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> 
-
-<style>
-.imagem {
-display: none;
-max-width: 300px;
-}
-</style>
-</head>
-<body>
-<h1>Exemplo de Exibição de Imagens</h1>
-<button onclick="showImage('imagem1')">Mostrar Imagem 1</button>
-<button onclick="showImage('imagem2')">Mostrar Imagem 2</button>
-<button onclick="showImage('imagem3')">Mostrar Imagem 3</button>
-<img id="imagem1" class="imagem" src="https://img.freepik.com/fotos-premium/3d-belo-retrato-de-lobo-cinzento-generatice-ai-generative-ai_751108-2942.jpg" alt="Imagem
-1">
-<img id="imagem2" class="imagem" src="https://s.bibliaon.com/img/imagens/fr/as/frases_de_boa_noite_com_deus_f_l.jpg" alt="Imagem
-2">
-<img id="imagem3" class="imagem" src="https://pbs.twimg.com/media/EwdO6bFXEAEyq-x.jpg" alt="Imagem
-3">
-<script>
-function showImage(imageId) {
-var images = document.getElementsByClassName('imagem');
-for (var i = 0; i < images.length; i++) {
-if (images[i].id === imageId) {
-images[i].style.display = 'block';
-} else {
-images[i].style.display = 'none';
-}
-}
-}
-</script>
-</body>
-</html>
--->
-
-
-<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
 
-
-
 </head>
 <body>
 
+<!----------------------------------------------------------------------STYLE------------------------------------------------------------------------>
 <style>
 
 body{
     background-image: url(https://wallpapercave.com/wp/wp2659190.jpg);
-    background-size: cover;
+    background-size:cover;
 }
 
 h1{
@@ -83,6 +39,13 @@ h3{
     -webkit-text-stroke:2px rgba(0, 0, 0, 0.62);
 }
 
+.imagem {
+display: none;
+max-width: 250px;
+max-height: 300px;
+}
+
+
 .box {
 width: 100px;
 height: 100px;
@@ -104,7 +67,40 @@ display: none;
 }
 .video{
     margin-left: 14%;
+    border:solid gold;
 }
+#gps{
+    border:solid rgb(80, 80, 80);
+   
+}
+
+/**//**//**//**//**//**//**//**//**//**//**//*MEDIA*//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+@media screen and (max-width: 1200px) {
+    body{
+        background-size: contain;
+    }
+    
+    .video{
+    margin-left: 0%;
+    border:solid 1px gold;
+    width: 40%; 
+    height:50%;
+    }
+    #gps{
+    margin-left: 0%;
+    border:solid 1px rgb(80, 80, 80);
+    width: 40%; 
+    height:50%;
+    }
+
+
+} 
+    
+
+
+
+
 .titanic{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 30px;
@@ -118,46 +114,53 @@ display: none;
     border-width: 5px;
 }
 
-
-
 </style>
-<div> <h2 class="nome" style="display: inline;">Ricardo Arthur</h2> <h2 style="display: inline;" class="projeto" >Meu projeto de site:</h2></div>
-<div> <h1 style="display: inline;"> Meu portfólio</h1> <a class="site" href="file:///C:/Users/Aluno/Desktop/Ricardo/HtmlCSS/Atividade1.html"> Meu primeiro site. </a></div> 
+<!----------------------------------------------------------------BODY---------------------------------------------------------------------------------->
+
+
+
+<!--TITULO / NOME / SUBTITULO-->
+    <div> <h2 class="nome" style="display: inline;">Ricardo Arthur</h2> <h2 style="display: inline;" class="projeto" >Meu projeto de site:</h2></div>
+    <div> <h1 style="display: inline;"> Meu portfólio</h1> <a class="site" href="file:///C:/Users/Aluno/Desktop/Ricardo/HtmlCSS/Atividade1.html"> Meu primeiro site. </a></div> 
 
 
 <!--MUDAR COR-->
-<h3>Clique para mudar a cor!</h3>
+    <h3>Clique para mudar a cor!</h3>
     <div class="box" onclick="mudarCor()"></div>
     
-<!--MOSTRAR / ESCONDER-->
-<h3>Projeto de mostrar / esconder.</h3>
-    <button onclick="alternarExibicao()">Mostrar/Esconder</button>
-<!--IMAGEM ESCONDIDA-->
-<div class="conteudo"><h3> Aqui aparece o que você quer:<br>
-    <img src="https://media.licdn.com/dms/image/C4D12AQH2cDbEPA9c7Q/article-cover_image-shrink_600_2000/0/1590505859753?e=2147483647&v=beta&t=ZEdkhVt6Ijo2b5-gYzicwsNK93K9HeYo_TwwdrA2auo" width="300px" height="200px"></h3></div>
+    <!--EXEMPLO DE EXIBIÇÃO DE IMAGENS-->
+    <h1>Exemplo de Exibição de Imagens</h1>
+    
+    <button onclick="showImage('imagem1')">Mostrar Imagem 1</button>
+    <button onclick="showImage('imagem2')">Mostrar Imagem 2</button>
+    <button onclick="showImage('imagem3')">Mostrar Imagem 3</button>
 
-<!--USO DE IFRAME-->
-<div class="iframe" style="display: inline;">
-    <h1>Exemplo de Uso de Iframe</h1>
-    <iframe class="video" src="https://www.youtube.com/embed/iogcY_4xGjo" title="YouTube video player" allowfullscreen width="500" height="300"></iframe>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13875.44339871076!2d-52.182447999999994!3d-29.6077311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1687543462139!5m2!1spt-BR!2sbr" width="500" height="300" style="border: 2px;;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div id="tamanhodiv" style="width: 300px;height: 200px;">
+    <img id="imagem1" class="imagem" src="https://img.freepik.com/fotos-premium/3d-belo-retrato-de-lobo-cinzento-generatice-ai-generative-ai_751108-2942.jpg" style="width: 300px;height: 200px;" alt="Imagem1">
+    <img id="imagem2" class="imagem" src="https://s.bibliaon.com/img/imagens/fr/as/frases_de_boa_noite_com_deus_f_l.jpg" style="width: 300px;height: 200px;" alt="Imagem2">
+    <img id="imagem3" class="imagem" src="https://pbs.twimg.com/media/EwdO6bFXEAEyq-x.jpg" style="width: 300px;height: 200px;" alt="Imagem3">
     </div>
 
-    <!--LINK E IMAGEM DO TITANIC-->
-<h2 class="titanic">A imagem contém um link:</h2>
+
+
+<!--MOSTRAR / ESCONDER-->
+    <h3>Projeto de mostrar / esconder.</h3>
+    <button onclick="alternarExibicao()">Mostrar/Esconder</button>
+<!--IMAGEM ESCONDIDA-->
+    <div class="conteudo"><h3> Aqui aparece o que você quer:<br>
+    <img src="https://media.licdn.com/dms/image/C4D12AQH2cDbEPA9c7Q/article-cover_image-shrink_600_2000/0/1590505859753?e=2147483647&v=beta&t=ZEdkhVt6Ijo2b5-gYzicwsNK93K9HeYo_TwwdrA2auo" width="300px" height="200px" alt="imagem"></h3></div>
+
+
+<!--USO DE IFRAME-->
+    <div class="iframe" style="display: inline;">
+    <h1>Exemplo de Uso de Iframe</h1>
+    <iframe class="video" src="https://www.youtube.com/embed/iogcY_4xGjo" title="YouTube video player" allowfullscreen width="500" height="300"></iframe>
+    <iframe id="gps" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13875.44339871076!2d-52.182447999999994!3d-29.6077311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1687543462139!5m2!1spt-BR!2sbr" width="500" height="300"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+<!--LINK E IMAGEM DO TITANIC-->
+    <h2 class="titanic">A imagem contém um link:</h2>
     <div> <a class="link" style="display: inline;" href="https://www.nationalgeographicbrasil.com/historia/2023/04/conheca-7-fatos-sobre-o-naufragio-do-titanic"> <img class="imagemdotitanic" src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/nationalgeographic762774.webp?w=710&h=474"></a><h1 style="display: inline; "  >  <----CLIQUE AQUI</h1> </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -165,13 +168,30 @@ display: none;
     <script>
                                                                     //SCRIPTS//
 
-        // FUNÇÃO MUDAR DE COR//
+// FUNÇÃO MUDAR DE COR//
     function mudarCor() {
     var box = document.querySelector('.box');
     box.style.backgroundColor = 'blue';
     }
-//
-        // FUNÇÃO ALTERNAR EXIBIÇÃO //
+
+
+//FUNÇÃO EXEMPLO DE EXIBIÇÃO DE IMAGENS//
+    function showImage(imageId) {
+        globalThis[ll]
+    var images = document.getElementsByClassName('imagem');
+    for (var i = 0; i < images.length; i++) {
+    if (images[i].id === imageId && ll != imageId) {
+    images[i].style.display = 'block';
+    ll = imageId
+    } else {
+    images[i].style.display = 'none';
+    }
+    }
+    }
+var ll = ""
+
+
+// FUNÇÃO ALTERNAR EXIBIÇÃO //
     function alternarExibicao() {
     var conteudo = document.querySelector('.conteudo');
     if (conteudo.style.display === 'none') {
